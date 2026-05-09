@@ -38,31 +38,14 @@ _, y_tendencia, pendiente, _ = calcular_tendencia(df_filtrado)
 
 # Visualización
 
-st.divider()
-col_principal, col_resumen = st.columns([2, 1])
+mostrar_metricas(stats)
 
-with col_principal:
-    fig = crear_grafico_lineas(
-        df=df_filtrado,
-        mostrar_tendencia=mostrar_tendencia,
-        y_tendencia=y_tendencia if mostrar_tendencia else None,
-    )
-    mostrar_grafico(fig, pendiente, mostrar_tendencia)
-
-with col_resumen:
-    st.subheader("Resumen rápido")
-    mostrar_metricas(stats)
-    st.divider()
-    st.markdown(
-        """
-        **Observaciones**
-        - Ajusta el rango de años en la barra lateral.
-        - Activa o desactiva la línea de tendencia.
-        - Descarga los datos al final de la página.
-        """
-    )
+fig = crear_grafico_lineas(
+    df=df_filtrado,
+    mostrar_tendencia=mostrar_tendencia,
+    y_tendencia=y_tendencia if mostrar_tendencia else None,
+)
+mostrar_grafico(fig, pendiente, mostrar_tendencia)
 
 if mostrar_tabla_datos:
-    st.divider()
-    st.markdown("### Datos detallados")
     mostrar_tabla(df_con_variacion)

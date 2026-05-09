@@ -23,60 +23,52 @@ def inicializar_aplicacion() -> None:
         <style>
             .block-container {
                 padding: 2rem 2rem 3rem;
-                background: radial-gradient(circle at top left, #1E293B 0%, #111827 100%);
-                color: #E2E8F0;
+                background-color: #ffffff;
             }
             .stApp {
-                background: #0F172A;
-                color: #E2E8F0;
+                background: #ffffff;
             }
             h1, h2, h3, p, span, label, a {
-                color: #E2E8F0 !important;
+                color: #000000 !important;
             }
             .stMetric {
-                background-color: #1E293B !important;
+                background-color: #ffffff !important;
                 border-radius: 1rem !important;
                 padding: 1rem !important;
-                box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45) !important;
-                color: #F8FAFC !important;
+                box-shadow: 0 16px 30px rgba(0, 0, 0, 0.06) !important;
             }
             .stDownloadButton button,
             .stButton button {
-                background-color: #F97316 !important;
+                background-color: #6c757d !important;
                 color: #ffffff !important;
                 border: none !important;
             }
             .stDownloadButton button:hover,
             .stButton button:hover {
-                background-color: #EA580C !important;
+                background-color: #495057 !important;
             }
             div[data-testid="stDataFrame"] table {
-                color: #E2E8F0 !important;
-                border-color: #334155 !important;
-                background-color: #0F172A !important;
+                color: #000000 !important;
+                border-color: #e5e7eb !important;
             }
             div[data-testid="stDataFrame"] th {
-                color: #F8FAFC !important;
-                background-color: #1E293B !important;
+                color: #000000 !important;
+                background-color: #F8FAFC !important;
             }
             div[data-testid="stDataFrame"] td {
-                background-color: #111827 !important;
+                background-color: #ffffff !important;
             }
             .stSidebar {
-                background-color: #111827 !important;
-                color: #E2E8F0 !important;
+                background-color: #f8f9fa !important;
             }
             .stSidebar h1, .stSidebar h2, .stSidebar h3, .stSidebar p, .stSidebar span, .stSidebar label, .stSidebar a {
-                color: #E2E8F0 !important;
+                color: #000000 !important;
             }
             .stCheckbox label, .stSlider label {
-                color: #E2E8F0 !important;
+                color: #000000 !important;
             }
             .stCheckbox input[type="checkbox"] {
-                accent-color: #38BDF8 !important;
-            }
-            .stSlider > div[data-testid="stSlider"] input {
-                accent-color: #38BDF8 !important;
+                accent-color: #6c757d !important;
             }
         </style>
         """,
@@ -86,17 +78,10 @@ def inicializar_aplicacion() -> None:
 
 def mostrar_encabezado(fuente: str, url_fuente: str) -> None:
     """Muestra el encabezado principal con título y fuente."""
+    st.title("Nacimientos en Colombia")
     st.markdown(
-        f"""
-        <div style="padding: 1.5rem 1.8rem; border-radius: 1.4rem; background: linear-gradient(135deg, #7C3AED 0%, #0EA5E9 100%); box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);">
-            <h1 style="margin: 0 0 0.4rem; font-size: 2.6rem; color: white;">Nacimientos en Colombia</h1>
-            <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.92);">
-                Análisis de nacimientos registrados en Colombia durante los últimos 10 años.
-                Fuente oficial: <strong><a href="{url_fuente}" target="_blank" style="color: #E0F2FE; text-decoration: underline;">{fuente}</a></strong>
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
+        f"Análisis de nacimientos registrados en Colombia durante los últimos 10 años. "
+        f"Fuente oficial: **[{fuente}]({url_fuente})**"
     )
     st.divider()
 
