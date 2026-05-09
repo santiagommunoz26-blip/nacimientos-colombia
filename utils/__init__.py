@@ -1,0 +1,1 @@
+from .analisis import calcular_estadisticas, calcular_variacion_anual, calcular_tendencia
