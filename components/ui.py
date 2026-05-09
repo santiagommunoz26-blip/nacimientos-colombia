@@ -58,8 +58,17 @@ def inicializar_aplicacion() -> None:
             div[data-testid="stDataFrame"] td {
                 background-color: #ffffff !important;
             }
-            footer {
-                visibility: hidden;
+            .stSidebar {
+                background-color: #f8f9fa !important;
+            }
+            .stSidebar h1, .stSidebar h2, .stSidebar h3, .stSidebar p, .stSidebar span, .stSidebar label, .stSidebar a {
+                color: #000000 !important;
+            }
+            .stCheckbox label, .stSlider label {
+                color: #000000 !important;
+            }
+            .stCheckbox input[type="checkbox"] {
+                accent-color: #6c757d !important;
             }
         </style>
         """,
