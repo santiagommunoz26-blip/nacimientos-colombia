@@ -1,10 +1,10 @@
-# 👶 Nacimientos en Colombia – Dashboard DANE
+# Nacimientos en Colombia – Dashboard DANE
 
 Dashboard interactivo desarrollado con **Streamlit** y **Plotly** que visualiza los nacimientos registrados en Colombia entre 2014 y 2023, según datos del DANE (Estadísticas Vitales).
 
 ---
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 nacimientos_colombia/
@@ -31,7 +31,7 @@ nacimientos_colombia/
 
 ---
 
-## 🚀 Cómo correrlo localmente
+## Cómo correrlo localmente
 
 ### Paso 1 – Instalar Python
 Asegúrate de tener **Python 3.9 o superior** instalado.
@@ -54,7 +54,7 @@ Se abrirá automáticamente en tu navegador en `http://localhost:8501`
 
 ---
 
-## 🌐 Cómo publicarlo en internet (Streamlit Community Cloud) – GRATIS
+## Cómo publicarlo en internet (Streamlit Community Cloud) – GRATIS
 
 ### Paso 1 – Crear cuenta en GitHub
 Ve a https://github.com y crea una cuenta gratuita.
@@ -86,18 +86,18 @@ En unos minutos tendrás una URL pública como:
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-- 📈 Gráfico de líneas interactivo (zoom, hover, exportar imagen)
-- 📉 Línea de tendencia lineal activable/desactivable
-- 🎚️ Filtro de rango de años con slider
-- 📊 Tarjetas con métricas clave (promedio, máximo, mínimo, total)
-- 📋 Tabla de datos con variación anual absoluta y porcentual
-- ⬇️ Descarga de los datos en formato CSV
+- Gráfico de líneas interactivo (zoom, hover, exportar imagen)
+- Línea de tendencia lineal activable/desactivable
+- Filtro de rango de años con slider
+- Tarjetas con métricas clave (promedio, máximo, mínimo, total)
+- Tabla de datos con variación anual absoluta y porcentual
+- Descarga de los datos en formato CSV
 
 ---
 
-## 📚 Fuente de datos
+## Fuente de datos
 
 **DANE – Departamento Administrativo Nacional de Estadística**
 Estadísticas Vitales – Nacimientos

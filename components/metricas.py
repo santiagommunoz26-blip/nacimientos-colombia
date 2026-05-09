@@ -18,20 +18,20 @@ def mostrar_metricas(stats: dict) -> None:
 
     with col1:
         st.metric(
-            label="📊 Promedio anual",
+            label="Promedio anual",
             value=f"{stats['promedio']:,}",
         )
 
     with col2:
         st.metric(
-            label="📈 Año con más nacimientos",
+            label="Año con más nacimientos",
             value=f"{stats['anio_maximo']}",
             delta=f"{stats['maximo']:,}",
         )
 
     with col3:
         st.metric(
-            label="📉 Año con menos nacimientos",
+            label="Año con menos nacimientos",
             value=f"{stats['anio_minimo']}",
             delta=f"-{stats['maximo'] - stats['minimo']:,}",
             delta_color="inverse",
@@ -39,6 +39,6 @@ def mostrar_metricas(stats: dict) -> None:
 
     with col4:
         st.metric(
-            label="👶 Total del período",
+            label="Total del período",
             value=f"{stats['total_periodo']:,}",
         )

@@ -13,7 +13,7 @@ def inicializar_aplicacion() -> None:
     """Configura la página y aplica estilos de interfaz."""
     st.set_page_config(
         page_title="Nacimientos en Colombia – DANE",
-        page_icon="👶",
+        page_icon=None,
         layout="wide",
         initial_sidebar_state="expanded",
     )
@@ -23,13 +23,13 @@ def inicializar_aplicacion() -> None:
         <style>
             .block-container {
                 padding: 2rem 2rem 3rem;
-                background-color: #F4F8FC;
+                background-color: #ffffff;
             }
             .stApp {
-                background: linear-gradient(180deg, #ffffff 0%, #eef6fc 100%);
+                background: #ffffff;
             }
             h1, h2, h3, p, span, label, a {
-                color: #1D3557 !important;
+                color: #000000 !important;
             }
             .stMetric {
                 background-color: #ffffff !important;
@@ -39,20 +39,20 @@ def inicializar_aplicacion() -> None:
             }
             .stDownloadButton button,
             .stButton button {
-                background-color: #457B9D !important;
+                background-color: #6c757d !important;
                 color: #ffffff !important;
                 border: none !important;
             }
             .stDownloadButton button:hover,
             .stButton button:hover {
-                background-color: #1D3557 !important;
+                background-color: #495057 !important;
             }
             div[data-testid="stDataFrame"] table {
-                color: #1D3557 !important;
+                color: #000000 !important;
                 border-color: #e5e7eb !important;
             }
             div[data-testid="stDataFrame"] th {
-                color: #1D3557 !important;
+                color: #000000 !important;
                 background-color: #F8FAFC !important;
             }
             div[data-testid="stDataFrame"] td {
@@ -69,7 +69,7 @@ def inicializar_aplicacion() -> None:
 
 def mostrar_encabezado(fuente: str, url_fuente: str) -> None:
     """Muestra el encabezado principal con título y fuente."""
-    st.title("👶 Nacimientos en Colombia")
+    st.title("Nacimientos en Colombia")
     st.markdown(
         f"Análisis de nacimientos registrados en Colombia durante los últimos 10 años. "
         f"Fuente oficial: **[{fuente}]({url_fuente})**"
@@ -80,7 +80,7 @@ def mostrar_encabezado(fuente: str, url_fuente: str) -> None:
 def mostrar_barra_lateral(anios_disponibles: List[int]) -> Tuple[Tuple[int, int], bool, bool]:
     """Muestra los controles en la barra lateral y devuelve las opciones seleccionadas."""
     with st.sidebar:
-        st.header("⚙️ Controles")
+        st.header("Controles")
         st.markdown("Personaliza la visualización según tus preferencias.")
 
         rango = st.slider(
@@ -95,8 +95,8 @@ def mostrar_barra_lateral(anios_disponibles: List[int]) -> Tuple[Tuple[int, int]
         mostrar_tabla_datos = st.toggle("Mostrar tabla de datos", value=True)
 
         st.divider()
-        st.caption("📌 Datos: DANE – Estadísticas Vitales")
-        st.caption("🎓 Proyecto académico universitario")
+        st.caption("Datos: DANE – Estadísticas Vitales")
+        st.caption("Proyecto académico universitario")
 
     return rango, mostrar_tendencia, mostrar_tabla_datos
 

@@ -10,8 +10,8 @@ import numpy as np
 
 
 # Paleta de colores de la aplicación
-COLOR_LINEA = "#E63946"
-COLOR_TENDENCIA = "#457B9D"
+COLOR_LINEA = "#1f77b4"
+COLOR_TENDENCIA = "#7f7f7f"
 COLOR_FONDO = "#FAFAFA"
 COLOR_GRILLA = "#E0E0E0"
 
@@ -39,7 +39,7 @@ def crear_grafico_lineas(
         x=df["Año"],
         y=df["Nacimientos"],
         fill="tozeroy",
-        fillcolor="rgba(230, 57, 70, 0.07)",
+        fillcolor="rgba(31, 119, 180, 0.07)",
         line=dict(color="rgba(0,0,0,0)"),
         showlegend=False,
         hoverinfo="skip",
@@ -83,21 +83,21 @@ def crear_grafico_lineas(
     fig.update_layout(
         title=dict(
             text="Nacimientos en Colombia (2014 – 2023)",
-            font=dict(size=20, color="#1D3557"),
+            font=dict(size=20, color="#000000"),
             x=0.02,
         ),
         xaxis=dict(
-            title=dict(text="Año", font=dict(size=13, color="#1D3557")),
+            title=dict(text="Año", font=dict(size=13, color="#000000")),
             tickmode="linear",
             dtick=1,
-            tickfont=dict(size=12, color="#1D3557"),
+            tickfont=dict(size=12, color="#000000"),
             showgrid=True,
             gridcolor=COLOR_GRILLA,
             linecolor="#A8B4CC",
             zerolinecolor="#A8B4CC",
         ),
         yaxis=dict(
-            title=dict(text="Número de nacimientos", font=dict(size=13, color="#1D3557")),
+            title=dict(text="Número de nacimientos", font=dict(size=13, color="#000000")),
             tickformat=",",
             tickfont=dict(color="#1D3557"),
             showgrid=True,
